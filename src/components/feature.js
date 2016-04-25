@@ -1,12 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 class Feature extends React.Component {
     constructor(props) {
         super(props);
     }
+
+    componentWillMount() {
+     	this.props.fetchMessage();     
+    }
+
     render() {
         return <div>Feature</div>;
     }
 }
 
-export default Feature;
+export default connect(null, actions)(Feature);
