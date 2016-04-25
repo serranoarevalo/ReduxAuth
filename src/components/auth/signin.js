@@ -8,7 +8,7 @@ class Signin extends React.Component {
     }
     
     handleFormSubmit = ({email, password}) => {
-    		console.log(email,password);
+    		this.props.signInUser({email, password});
     }
 
     renderAlert = () => {
